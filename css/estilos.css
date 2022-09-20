@@ -1,3 +1,7 @@
 #TITULO{
     color: brown;
+    text-align: center;
+}
+li{
+    display: inline;
 }
