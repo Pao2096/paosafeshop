@@ -1,6 +1,17 @@
+#cabe{
+    display: inline;
+}
 #TITULO{
     color: brown;
-    text-align: center;
+}
+#navbar{
+    display: inline;
+    padding: 8px;
+    background-color: aquamarine;
+}
+#icono{
+    height: 60px;
+    width: 40px;
 }
 li{
     display: inline;
