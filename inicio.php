@@ -1,5 +1,8 @@
 <?php
+include("php/conexion.php");
+$con=conectar();
 
+echo "Se coneccto correctamente.";
 ?>
 <!DOCTYPE html>
 <html lang="en">
