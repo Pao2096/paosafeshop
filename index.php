@@ -20,23 +20,39 @@ else if ($nr == 0)
 	//echo "<script> alert('Error');window.location= 'login.html' </script>";
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/estilos.css">
+	<title>Login</title>
+</head>
+<body>
+	<div class="contenedor_loader">
+		<div class="loader">
+		</div>
+	</div>
 
-<html>
-<link rel="stylesheet" href="css/estilos.css">
-<center>
-<form method="post" action="index.php">
-<table class="login">
-<tr><td colspan="2" style="background-color:#33A8DB; padding-bottom:5px; padding-top:5px;">
-<label>Login</label></td>
-</tr>
-<tr>
-<td><label>Usuario</label></td>
-</tr>
-<tr><td><input type="text" name="txtusuario"/></td></tr>
-<tr><td><label>Password</label></td></tr>
-<tr><td><input type="password" name="txtpassword" /> </td></tr>
-<tr><td><input type="submit" value="Ingresar" /> </td></tr>
-</table>
-</form>
-</center>
+	<div class="login-box">
+		<img src="IMAGENES/icono.png" class="icono">
+		<h1>INICIAR SESIÓN</h1>
+		<form method="post" action="index.php">
+
+		<label>Usuario:</label>
+		<input type="text" name="txtusuario" placeholder="Usuario"/>
+
+		<label>Password</label>
+		<input type="password" name="txtpassword" placeholder="Contraseña"/>
+		
+		<input type="submit" value="INGRESAR"/>
+
+		<a href="#">Restablecer contraseña</a><br>
+		<a href="#">Crear una cuenta</a>
+		</form>		
+	</div>
+	
+	<script src="js/script.js"></script>
+</body>
 </html>

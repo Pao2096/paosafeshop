@@ -11,7 +11,6 @@
         }
         else
         {
-            echo "<h3>Conexion Exitosa PHP - MySQL</h3><hr><br>";
             return $con;
         }
     }
