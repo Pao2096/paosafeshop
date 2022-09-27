@@ -15,7 +15,7 @@ if($nr == 1)
 }
 else if ($nr == 0) 
 {
-	//header("Location: login.php");
+	//header("Location: index.php");
 	echo "No ingreso"; 
 	//echo "<script> alert('Error');window.location= 'login.html' </script>";
 }
@@ -24,7 +24,7 @@ else if ($nr == 0)
 <html>
 <link rel="stylesheet" href="css/estilos.css">
 <center>
-<form method="post" action="login.php">
+<form method="post" action="index.php">
 <table class="login">
 <tr><td colspan="2" style="background-color:#33A8DB; padding-bottom:5px; padding-top:5px;">
 <label>Login</label></td>
