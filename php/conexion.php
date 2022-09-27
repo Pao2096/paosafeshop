@@ -4,7 +4,7 @@
         $pass="";
         $server="localhost";
         $db="paosafeshop";
-        $con=mysql_connect($server,$user,$pass) or die ("Error al conectar la base de datos".mysql_error());
+        $con= mysql_connect($server,$user,$pass);
         mysql_select_sb(db,Scon);
 
         return $con;
