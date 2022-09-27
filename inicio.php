@@ -22,7 +22,6 @@ $con=conectar();
                 <li><a href="#" id="galeria">GALERIA</a></li>
                 <li><a href="#" id="contacto">CONTACTO</a></li>
             </ul>
-            <button type="button">INGRESAR</button>
         </nav>
         <div class="inicio" id="inicio">
             <div class="informacion">

@@ -10,6 +10,43 @@ body{
     background-position: center;
 
 }
+.login table 
+    {
+    border: 2px solid #353A46;
+    background-color: #3ABAF1;
+    }
+    
+.login input[type=text], input[type=password]
+    {
+    width: 100%;
+    padding: 8px 20px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    }
+    
+.login img
+    {
+    width: 100px;
+    height: 100px;
+    }
+    
+.login label
+    {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: arial;
+    }
+    
+.login input[type=submit]
+    {
+    background-color: #1C94C8;
+    color:white;
+    padding: 8px 10px;
+    margin: 8px 0px;
+    border: solid;
+    cursor: pointer;
+    width: 40%;
+    }
 .hero{
     height: 100vh;
     width: 100%;
