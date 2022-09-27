@@ -3,12 +3,16 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
-}.hero{
-    height: 100vh;
-    width: 100%;
+}
+body{
     background-image: linear-gradient(rgba(204, 51, 255,0.2),rgba(204, 51, 255,0.2)),url(../IMAGENES/background.jpg);
     background-size: cover;
     background-position: center;
+
+}
+.hero{
+    height: 100vh;
+    width: 100%;
 }
 nav{
     background-color: rgba(255,255,255,0.4);
@@ -59,9 +63,8 @@ button:hover{
     cursor: pointer;
 }
 .slider{
-    width: 35%;
-    margin-left: 60%;
-    margin-top: 20px;
+    width: 50%;
+    margin: auto;
     overflow: hidden;
 }
 .slider ul{
@@ -86,4 +89,8 @@ button:hover{
 
     60% {margin-left: -100%;}
     100% {margin-left: -100%;}
+}
+.sobre_mi{
+    margin: auto;
+    width: 90%;
 }
