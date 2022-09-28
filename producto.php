@@ -57,10 +57,10 @@
             <div class="mx-auto col-sm-8 main-section" id="myTab" role="tablist">
                 <ul class="nav nav-tabs justify-content-end">
                     <li class="nav-item">
-                    <a class="nav-link active" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false">List</a>
+                    <a class="nav-link active" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false">Lista</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" id="form-tab" data-toggle="tab" href="#form" role="tab" aria-controls="form" aria-selected="true">Form</a>				   	
+                    <a class="nav-link" id="form-tab" data-toggle="tab" href="#form" role="tab" aria-controls="form" aria-selected="true">Agregar</a>				   	
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
@@ -78,20 +78,35 @@
                                             <th scope="col">ID</th>
                                             <th scope="col">Nombre</th>
                                             <th scope="col">Descripción</th>
-                                            <th scope="col">Imágen</th>
-                                            <th></th>
+                                            <th scope="col">Precio</th>
+                                            <th scope="col">Acción</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <th scope="row"><?php echo $row['id_prod']?></th>
-                                            <td><?php echo $row['nom_prod']?></td>
-                                            <td><?php echo $row['desc_prod']?></td>
-                                            <td><?php echo $row['img_prod']?></td>
-                                            <td>
-                                                <a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fas fa-user-times"></i></a>
-                                            </td>
-                                        </tr>
+                                            <tr>
+                                                <th scope="row"><?php echo $row['id_prod']?></th>
+                                                <td><?php echo $row['nom_prod']?></td>
+                                                <td><?php echo $row['desc_prod']?></td>
+                                                <td><?php echo $row['pre_prod']?></td>
+                                                <td>
+                                                    <a href="#form" <?php echo $row['id_prod'] ?>><i class="fas fa-edit"></i></a> | <a href="php/eliminar.php?id_prod= <?php echo $row['id_prod'] ?>"><i class="fas fa-trash"></i></a>
+                                                </td>
+                                            </tr>
+                                            <?php
+                                                while ($row=mysqli_fetch_array($query)) {
+                                            ?>
+                                            <tr>
+                                                <th scope="row"><?php echo $row['id_prod']?></th>
+                                                <td><?php echo $row['nom_prod']?></td>
+                                                <td><?php echo $row['desc_prod']?></td>
+                                                <td><?php echo $row['pre_prod']?></td>
+                                                <td>
+                                                    <a href="#form" <?php echo $row['id_prod'] ?>><i class="fas fa-edit"></i></a> | <a href="php/eliminar.php?id_prod= <?php echo $row['id_prod'] ?>"><i class="fas fa-trash"></i></a>
+                                                </td>
+                                            </tr>
+                                        <?php   
+                                            }
+                                        ?>    
                                         </tbody>
                                     </table>
                                 </div>
@@ -105,7 +120,7 @@
                         </div>
                         <div class="card-body">
                         <!-- Formulario de usuarios-->
-                            <form class="form" role="form" autocomplete="off">
+                            <form class="form" role="form" method="POST" action="php/insertar.php" autocomplete="off">
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label form-control-label">Nombre</label>
                                     <div class="col-lg-9">
@@ -119,17 +134,15 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label form-control-label">Imágen</label>
+                                    <label class="col-lg-3 col-form-label form-control-label">Precio</label>
                                     <div class="col-lg-9">
-                                        <input class="btn-control" type="button" value="Seleccionar archivo" name="img_prod">
-                                        <label class="form-control-label">Nombre archivo</label>
+                                        <input class="form-control" type="text" name="pre_prod">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-lg-12 text-center">
                                         <input type="reset" class="btn btn-secondary" value="CANCELAR">
-                                        <input type="button" class="btn btn-primary"
-                                            value="GUARDAR">
+                                        <input type="submit" class="btn btn-primary" value="GUARDAR">
                                     </div>
                                 </div>
                             </form>
