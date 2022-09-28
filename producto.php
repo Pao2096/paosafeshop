@@ -48,92 +48,97 @@
 		<div class="loader">
 		</div>
 	</div>
+    <div class="hero">
+        <nav>
+            <a href="inicio.php"><h2 class="logo">Pao's Safe Shop</h2></a>
+        </nav>
 
-    <div class="container">
-	    <div class="mx-auto col-sm-8 main-section" id="myTab" role="tablist">
-            <ul class="nav nav-tabs justify-content-end">
-                <li class="nav-item">
-                <a class="nav-link active" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false">List</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" id="form-tab" data-toggle="tab" href="#form" role="tab" aria-controls="form" aria-selected="true">Form</a>				   	
-                </li>
-            </ul>
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
+        <div class="container">
+            <div class="mx-auto col-sm-8 main-section" id="myTab" role="tablist">
+                <ul class="nav nav-tabs justify-content-end">
+                    <li class="nav-item">
+                    <a class="nav-link active" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false">List</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" id="form-tab" data-toggle="tab" href="#form" role="tab" aria-controls="form" aria-selected="true">Form</a>				   	
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Productos en stock</h4>
+                            </div>
+                            <div class="card-body">
+                                <!-- Lista de usuarios-->
+                                <div class="table-responsive">
+                                    <table id="userList" class="table table-bordered table-hover table-striped">
+                                        <thead class="thead-light">
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Descripción</th>
+                                            <th scope="col">Imágen</th>
+                                            <th></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row"><?php echo $row['id_prod']?></th>
+                                            <td><?php echo $row['nom_prod']?></td>
+                                            <td><?php echo $row['desc_prod']?></td>
+                                            <td><?php echo $row['img_prod']?></td>
+                                            <td>
+                                                <a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fas fa-user-times"></i></a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="tab-pane fade" id="form" role="tabpanel" aria-labelledby="form-tab">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Productos en stock</h4>
+                            <h4>Agregar nuevo producto</h4>
                         </div>
                         <div class="card-body">
-                            <!-- Lista de usuarios-->
-                            <div class="table-responsive">
-                                <table id="userList" class="table table-bordered table-hover table-striped">
-                                    <thead class="thead-light">
-                                    <tr>
-                                        <th scope="col">ID</th>
-                                        <th scope="col">Nombre</th>
-                                        <th scope="col">Descripción</th>
-                                        <th scope="col">Imágen</th>
-                                        <th></th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <th scope="row"><?php echo $row['id_prod']?></th>
-                                        <td><?php echo $row['nom_prod']?></td>
-                                        <td><?php echo $row['desc_prod']?></td>
-                                        <td><?php echo $row['img_prod']?></td>
-                                        <td>
-                                            <a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fas fa-user-times"></i></a>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                        <!-- Formulario de usuarios-->
+                            <form class="form" role="form" autocomplete="off">
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Nombre</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="text" name="nom_prod">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Descripción</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="text" name="desc_prod">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Imágen</label>
+                                    <div class="col-lg-9">
+                                        <input class="btn-control" type="button" value="Seleccionar archivo" name="img_prod">
+                                        <label class="form-control-label">Nombre archivo</label>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-12 text-center">
+                                        <input type="reset" class="btn btn-secondary" value="CANCELAR">
+                                        <input type="button" class="btn btn-primary"
+                                            value="GUARDAR">
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                    </div>
-                </div>
-            <div class="tab-pane fade" id="form" role="tabpanel" aria-labelledby="form-tab">
-                <div class="card">
-                    <div class="card-header">
-                        <h4>Agregar nuevo producto</h4>
-                    </div>
-                    <div class="card-body">
-                    <!-- Formulario de usuarios-->
-                        <form class="form" role="form" autocomplete="off">
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-form-label form-control-label">Nombre</label>
-                                <div class="col-lg-9">
-                                    <input class="form-control" type="text" name="nom_prod">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-form-label form-control-label">Descripción</label>
-                                <div class="col-lg-9">
-                                    <input class="form-control" type="text" name="desc_prod">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-form-label form-control-label">Imágen</label>
-                                <div class="col-lg-9">
-                                    <input class="btn-control" type="button" value="Seleccionar archivo" name="img_prod">
-                                    <label class="form-control-label">Nombre archivo</label>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-lg-12 text-center">
-                                    <input type="reset" class="btn btn-secondary" value="CANCELAR">
-                                    <input type="button" class="btn btn-primary"
-                                        value="GUARDAR">
-                                </div>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>
         </div>
-	</div>
+    </div>
 
 <script src="js/script.js"></script>
 </body>
