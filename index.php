@@ -2,23 +2,23 @@
 include("php/conexion.php");
 $con=conectar();
 
-$nombre= $_POST["txtusuario"];
-$pass = $_POST["txtpassword"];
+//if (isset($user) || isset($pass)) {
+	$user= $_POST["txtusuario"];
+	$pass = $_POST["txtpassword"];
 
-$query = mysqli_query($con,"SELECT * FROM usuarios WHERE usuario = '".$nombre."' and password = '".$pass."'");
-$nr = mysqli_num_rows($query);
+	$query = mysqli_query($con,"SELECT * FROM usuarios WHERE usuario = '".$user."' and password = '".$pass."'");
+	$nr = mysqli_num_rows($query);
 
-if($nr == 1)
-{
-	header("Location: inicio.php");
-	echo "Bienvenido:" .$nombre;
-}
-else if ($nr == 0) 
-{
-	//header("Location: index.php");
-	echo "No ingreso"; 
-	//echo "<script> alert('Error');window.location= 'login.html' </script>";
-}
+	if($nr == 1)
+	{
+		header("Location: inicio.php");
+	}
+	else if ($nr == 0) 
+	{
+		header("Location: index.php");
+		echo "<script> alert('Usuario o contraseña incorrecta.');window.location= 'login.php' </script>";
+	}
+//}
 ?>
 <!DOCTYPE html>
 <html lang="en">

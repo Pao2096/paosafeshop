@@ -1,8 +1,3 @@
-<?php
-include("php/conexion.php");
-$con=conectar();
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,15 +8,20 @@ $con=conectar();
     <title>Pao's Safe Shop</title>
 </head>
 <body>
+    <div class="contenedor_loader">
+		<div class="loader">
+		</div>
+	</div>
     <div class="hero">
         <nav>
             <h2 class="logo">Pao's Safe Shop</h2>
             <ul>
                 <li><a href="#" id="inicio">INICIO</a></li>
                 <li><a href="#" id="sobre_mi">SOBRE MI</a></li>
-                <li><a href="#" id="galeria">GALERIA</a></li>
+                <li><a href="producto.php" id="galeria">PRODUCTOS</a></li>
                 <li><a href="#" id="contacto">CONTACTO</a></li>
             </ul>
+            <button type="button">SALIR</button>
         </nav>
         <div class="inicio" id="inicio">
             <div class="informacion">
@@ -59,5 +59,6 @@ $con=conectar();
 
         </div>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
