@@ -38,7 +38,7 @@ if (isset($user) || isset($pass)) {
 	<div class="login-box">
 		<img src="IMAGENES/icono.png" class="icono">
 		<h1>INICIAR SESIÓN</h1>
-		<form method="post" action="index.php">
+		<form method="post" action="inicio.php">
 
 		<label>Usuario:</label>
 		<input type="text" name="txtusuario" placeholder="Usuario"/>
