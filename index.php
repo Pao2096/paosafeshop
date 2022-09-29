@@ -2,7 +2,7 @@
 include("php/conexion.php");
 $con=conectar();
 
-//if (isset($user) || isset($pass)) {
+if (isset($user) || isset($pass)) {
 	$user= $_POST["txtusuario"];
 	$pass = $_POST["txtpassword"];
 
@@ -16,9 +16,9 @@ $con=conectar();
 	else if ($nr == 0) 
 	{
 		header("Location: index.php");
-		echo "<script> alert('Usuario o contraseña incorrecta.');window.location= 'login.php' </script>";
+		echo "<script> alert('Usuario o contraseña incorrecta.');window.location= 'index.php' </script>";
 	}
-//}
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
