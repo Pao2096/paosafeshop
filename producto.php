@@ -1,5 +1,5 @@
 <?php
-    include("php/crud.php");
+    include("php/listar.php");
 ?>
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">

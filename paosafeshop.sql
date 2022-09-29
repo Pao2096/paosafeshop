@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-09-2022 a las 05:01:28
+-- Tiempo de generación: 29-09-2022 a las 04:15:23
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -31,15 +31,18 @@ CREATE TABLE `producto` (
   `id_prod` int(5) NOT NULL,
   `nom_prod` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
   `desc_prod` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
-  `img_prod` varchar(100) COLLATE utf8_spanish_ci NOT NULL
+  `pre_prod` int(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `producto`
 --
 
-INSERT INTO `producto` (`id_prod`, `nom_prod`, `desc_prod`, `img_prod`) VALUES
-(1, 'Bolso', 'Bolso para dama, tenemos variedades de colores.', 'bolso.jpg');
+INSERT INTO `producto` (`id_prod`, `nom_prod`, `desc_prod`, `pre_prod`) VALUES
+(1, 'Bolso', 'Bolso para dama, tenemos variedades de colores.', 150000),
+(2, 'Labial', 'Labial brillo protector de labios', 35000),
+(3, 'Reloj', 'Reloj dama', 75000),
+(5, 'Medias', 'Medias niña con orejitas', 10000);
 
 -- --------------------------------------------------------
 
@@ -86,7 +89,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `id_prod` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_prod` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
